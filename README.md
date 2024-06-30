@@ -17,29 +17,30 @@ Dar um nome para essa chave no campo "Title"
 Colar a chave no campo "Key"
 OBS: Flegar "Allow white access" Apenas se esse usuario precisar acesso de escrita
 
-BRANCH
+BRANCH 
 
-Criado a branch develop para questões de desenvolvimento da seguinte forma:
+Criado a branch develop para questões de desenvolvimento da seguinte forma: 
 
-#criar
+
+#criar 
 git branch -c develop 
 
 #acessar
 git checkout develop
 
-#add arquivos
-git add .
+#add arquivos 
+git add . 
 
-#commit
-git commit -m "Descrever"
+#commit 
+git commit -m "Descrever" 
 
-#push
-git push origin develop
+#push 
+git push origin develop 
 
-#Mesclar o conteudo da feature (develop) com produção (main)
-git checkout main
-//sempre checar dando pull nele mesmo
-git pull origin main
-git merge develop
-git commit -m "Descrever"
-git push origin main
+#Mesclar o conteudo da feature (develop) com produção (main) 
+git checkout main 
+//sempre checar dando pull nele mesmo 
+git pull origin main 
+git merge develop 
+git commit -m "Descrever" 
+git push origin main 
