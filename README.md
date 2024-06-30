@@ -27,3 +27,16 @@ git branch -c develop
 #acessar
 git checkout develop
 
+#add arquivos
+git add .
+
+#commit
+git commit -m "Descrever"
+
+#push
+git push origin develop
+
+#Mesclar o conteudo da feature (develop) com produção (main)
+git checkout master
+git pull origin master
+git merge develop
