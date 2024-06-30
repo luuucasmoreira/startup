@@ -37,6 +37,9 @@ git commit -m "Descrever"
 git push origin develop
 
 #Mesclar o conteudo da feature (develop) com produção (main)
-git checkout master
-git pull origin master
+git checkout main
+//sempre checar dando pull nele mesmo
+git pull origin main
 git merge develop
+git commit -m "Descrever"
+git push origin main
