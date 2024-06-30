@@ -22,31 +22,36 @@ BRANCH
 
 Criado a branch develop para questões de desenvolvimento da seguinte forma:
 
-# criar
+## criar
 
 git branch -c develop
 
-# acessar
+## acessar
 
 git checkout develop
 
-# add arquivos
+## add arquivos
 
 git add .
 
-# commit
+## commit
 
 git commit -m "Descrever"
 
-# push
+## push
 
 git push origin develop
 
-# Mesclar o conteudo da feature (develop) com produção (main)
+## Mesclar o conteudo da feature (develop) com produção (main)
 
-git checkout main \\
+git checkout main
+
 //sempre checar dando pull nele mesmo
+
 git pull origin main
+
 git merge develop
+
 git commit -m "Descrever"
+
 git push origin main
