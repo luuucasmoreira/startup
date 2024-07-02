@@ -16,21 +16,3 @@ resource "aws_dynamodb_table" "us-east-1" {
     Enviroment = "Testing"
   }
 }
-
-#Kubertenes com kind
-resource "null_resource" "kind_cluster" {
-  provisioner "local-exec" {
-    command = "kind create cluster --config=kind-config.yaml"
-    working_dir = path.module
-  }
-
-  provisioner "local-exec" {
-    when    = destroy
-    command = "kind delete cluster"
-    working_dir = path.module
-  }
-}
-
-output "kubeconfig" {
-  value = "Kubeconfig gerado para o cluster Kind." #output de saida
-}
