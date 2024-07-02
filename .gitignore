@@ -1,0 +1,22 @@
+#local do terraform (diretorio)
+.terraform/*
+
+#State files
+*.tfstate
+*.tfstate.*
+
+
+# Log files
+*.log
+
+#Data
+*.tfvars
+*.tfvars.json
+
+#outros
+*_override.tf
+*_override.tf.json
+override.tf
+override.tf.json
+.terraformrc
+terraform.rc

@@ -56,3 +56,22 @@ git merge develop
 git commit -m "Descrever"
 
 git push origin main
+
+
+## Terraform e LocalStack
+
+rodar o comando para iniciar um conteiner contendo o localstack
+docker-compose up -d
+
+rodar os comandos para iniciar a criação do bucket e do dynamodb
+terraform init
+terraform apply
+
+OBS:
+Main.tf consta toda configuração da aws com o endpont do localstack que seria na porta 4566
+resources.tf consta as configurações especificas do bucket e do dynamodb
+
+Tambem não poderá esquecer que o usuario do localstack por padrão seria default, precisa liberar o perfil da aws ou criar um usuario default na aws
+
+necessario instalar o 
+pip install terraform-local
