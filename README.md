@@ -77,3 +77,10 @@ resources.tf consta as configurações especificas do bucket e do dynamodb
 
 configurar para pegar as chaves como "test"
 aws configure
+
+## Kubernets com kind
+
+Necessario instalar kubectl (no meu caso windows)
+
+choco install kubernetes-cli
+

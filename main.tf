@@ -21,3 +21,16 @@ provider "aws"{
     dynamodb = "http://localhost:4566"
   }
 }
+
+#Kubernetes com kind
+provider "null" {
+  version = "2.1.2"
+}
+
+provider "local" {
+  version = "1.4.0"
+}
+
+provider "tls" {
+  version = "2.2.0"
+}
