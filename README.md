@@ -73,7 +73,7 @@ pip install terraform-local
 Main.tf consta toda configuração da aws com o endpont do localstack que seria na porta 4566
 resources.tf consta as configurações especificas do bucket e do dynamodb
 
-##AWS CLI
+## AWS CLI
 
 configurar para pegar as chaves como "test"
 aws configure
