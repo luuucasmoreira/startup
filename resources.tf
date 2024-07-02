@@ -16,4 +16,3 @@ resource "aws_dynamodb_table" "us-east-1" {
     Enviroment = "Testing"
   }
 }
-

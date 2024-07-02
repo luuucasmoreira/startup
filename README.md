@@ -71,9 +71,23 @@ necessita ter instalado o tflocal conforme documentação do localstack
 pip install terraform-local
 
 Main.tf consta toda configuração da aws com o endpont do localstack que seria na porta 4566
+
 resources.tf consta as configurações especificas do bucket e do dynamodb
 
-##AWS CLI
+Rodando os comandos percebemos que ja está em execução o s3 e o dynamodb
+
+aws --endpoint-url=<http://localhost:4566> s3 ls
+
+aws --endpoint-url=<http://localhost:4566> dynamodb table-lists
+
+## AWS CLI
 
 configurar para pegar as chaves como "test"
+
 aws configure
+
+## Kubernets com kind
+
+Necessario instalar kubectl (no meu caso windows)
+
+choco install kubernetes-cli
