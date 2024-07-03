@@ -88,6 +88,46 @@ aws configure
 
 ## Kubernets com kind
 
-Necessario instalar kubectl (no meu caso windows)
+No terraforms por padrão ele não reconhece o provider do kind e do kubectl então teremos que fazer isso manualmente
 
-choco install kubernetes-cli
+vamos criar as pastas
+
+mkdir ~/.terraform.d/plugins/gavinbunney/kubectl/1.14.0/linux_amd64/
+mkdir ~/.terraform.d/plugins/gavinbunney/kubectl/1.14.0/linux_amd64/
+
+#Logo em seguida, devemos fazer o dowload e a descompactação dos arquivos manualmente
+
+cd ./.terraform.d/plugins/gavinbunney/kubectl/1.14.0/linux_amd64
+
+wget https://github.com/gavinbunney/terraform-provider-kubectl/releases/download/v1.14.0/terraform-provider-kubectl_1.14.0_linux_amd64.zip
+
+unzip terraform-provider-kubectl_v1.14.0.zip
+
+rm terraform-provider-kubectl_v1.14.0.zip
+
+#mesmo procedimento com o kind
+
+cd ./.terraform.d/plugins/techyx/kind/0.5.1/linux_amd64
+
+wget https://github.com/tehcyx/terraform-provider-kind/releases/download/v0.5.1/terraform-provider-kind_0.5.1_linux_amd64.zip
+
+unzip terraform-provider-kind_0.5.1_linux_amd64.zip
+
+rm terraform-provider-kind_0.5.1_linux_amd64.zip
+
+## configurando para poder pegar o diretorio correto
+
+criar um arquivo chamado .terraform.rc e apontar aonde vai ser lido os providers
+
+provider_installation {
+  filesystem_mirror {
+    path = "~/.terraform.d/plugins"
+  }
+  direct {
+    exclude = ["*"]
+  }
+}
+
+#OBS:
+precisei as deletar algumas vezes o .terraform para que iniciace o tflocal sem cache
+

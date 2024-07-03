@@ -4,6 +4,20 @@ terraform {
             source = "hashicorp/aws"
             version = "~> 5.0"
         }
+        # kubectl = {
+        #     source  = "gavinbunney/kubectl"
+        #     version = ">= 1.7.0"
+        # }
+
+        kind = {
+          source = "tehcyx/kind"
+          version = "0.5.1"
+        }
+      
+        kubectl = {
+          source = "gavinbunney/kubectl"
+          version = "1.14.0"
+        }
     }
 }
 
@@ -22,3 +36,5 @@ provider "aws"{
     dynamodb = "http://localhost:4566"
   }
 }
+
+provider "kind" {}
