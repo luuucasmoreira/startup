@@ -117,17 +117,25 @@ rm terraform-provider-kind_0.5.1_linux_amd64.zip
 
 ## configurando para poder pegar o diretorio correto
 
-criar um arquivo chamado .terraform.rc e apontar aonde vai ser lido os providers
+criar um arquivo chamado .terraformrc e apontar aonde vai ser lido os providers
 
 provider_installation {
+
   filesystem_mirror {
+  
     path = "~/.terraform.d/plugins"
+    
   }
+  
   direct {
+  
     exclude = ["*"]
+    
   }
+  
 }
 
+
 #OBS:
-precisei as deletar algumas vezes o .terraform para que iniciace o tflocal sem cache
+precisei deletar algumas vezes o .terraform para que iniciace o tflocal sem cache
 
